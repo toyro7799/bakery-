@@ -1,0 +1,5 @@
+{
+  "name": "Bakery Calculator (الخباز الذكي)",
+  "description": "A specialized calculator for bakery management to track production of bread, trays (tajin), carts (karousa), and pastries with automatic price calculation.",
+  "requestFramePermissions": []
+}
