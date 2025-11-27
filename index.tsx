@@ -13,3 +13,18 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// 🚨 هذا هو الكود المضاف لتسجيل Service Worker وبدء العمل دون اتصال
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    // نستخدم المسار النسبي: ./service-worker.js
+    // يجب أن يكون هذا الملف موجوداً في نفس مستوى index.html
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(registration => {
+        console.log('Service Worker registered successfully: ', registration);
+      })
+      .catch(registrationError => {
+        console.error('Service Worker registration failed: ', registrationError);
+      });
+  });
+}
