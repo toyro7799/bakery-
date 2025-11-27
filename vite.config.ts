@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
     // 🛠️ الحل: هذا السطر يحل مشكلة المسارات في GitHub Pages
-    base: '/Baker-html/', 
+    base: '/', 
     server: {
       port: 3000,
       host: '0.0.0.0',
